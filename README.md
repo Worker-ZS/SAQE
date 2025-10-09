@@ -1,4 +1,4 @@
-## SAQE
+## SAQE: Complex Logical Query Answering via Semantic-Aware Representation Learning
 
 
 ## 1. Download the datasets
@@ -43,5 +43,6 @@ $ bash scripts/eval_fs_fb15k-SAQE.sh > log/fb15k-SAQE.log
 $ bash scripts/eval_fs_fb15k-237-SAQE.sh > log/fb15k-237-SAQE.log
 $ bash scripts/eval_fs_nell-SAQE.sh > log/nell-SAQE.log
 ```
+
 
 If you have any question, please contact to caozongsheng@iie.ac.cn
