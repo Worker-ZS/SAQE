@@ -1,13 +1,9 @@
 ## SAQE: Complex Logical Query Answering via Semantic-Aware Representation Learning
 
 
-## 1. Download the datasets
-
-The KG data (FB15k, FB15k-237, NELL995) mentioned in the BetaE paper and the Query2box paper can be downloaded [here](http://snap.stanford.edu/betae/KG_data.zip).
 
 
-
-## 2. Obtain the pre-trained backbone models
+ Obtain the pre-trained backbone models
 
 ```bash
 $ mkdir SAQE-M/models/
@@ -46,3 +42,4 @@ $ bash scripts/eval_fs_nell-SAQE.sh > log/nell-SAQE.log
 
 
 If you have any question, please contact to caozongsheng@iie.ac.cn
+
