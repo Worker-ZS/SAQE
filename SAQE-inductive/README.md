@@ -1,0 +1,1 @@
+python script/run.py -c config/complex_query/saqe_main.yaml --ratio 217 --gpus [1]

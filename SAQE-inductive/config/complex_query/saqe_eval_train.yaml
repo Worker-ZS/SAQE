@@ -1,0 +1,41 @@
+output_dir: .~/git/SAQE/experiments
+
+dataset:
+  class: InductiveFB15k237CompExtendedEval  
+  path: ~/git/SAQE/data
+  ratio: {{ ratio }}                
+task:
+  class: InductiveLogicalQuery
+  model:
+    class: GNN-QE
+    model:
+      class: NBFNet
+      input_dim: 32                 
+      hidden_dims: [32, 32, 32, 32,32, 32,32]
+      message_func: distmult
+      aggregate_func: pna
+      short_cut: yes
+      layer_norm: yes
+      dependent: yes
+    logic: product
+    dropout_ratio: 0.5
+  criterion: bce
+  sample_weight: no
+  adversarial_temperature: 0.1
+
+optimizer:
+  class: Adam
+  lr: 5.0e-3
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 64                    
+
+train:
+  num_epoch: 0                      
+  batch_per_epoch: 1000             
+
+checkpoint: {{ checkpoint }}        
+metric: mrr
+skip_eval_on_train: False           
+save_embs: False                    
